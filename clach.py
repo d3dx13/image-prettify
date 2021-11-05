@@ -1,6 +1,8 @@
 import cv2
 import sys
 
+print(sys.argv)
+
 global PREVIEW, INPUT, OUTPUT, clipLimit, tileGridSize
 PREVIEW = False
 INPUT = None
@@ -46,11 +48,11 @@ def parse_param(substring):
 start_index = 0
 if len(sys.argv) <= start_index:
     exit_help()
-if sys.argv[start_index].startswith("python"):
+if "python" in sys.argv[start_index]:
     start_index += 1
     if len(sys.argv) <= start_index:
         exit_help()
-if sys.argv[start_index] == "clach.py":
+if "clach.py" in sys.argv[start_index]:
     start_index += 1
     if len(sys.argv) <= start_index:
         exit_help()

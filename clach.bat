@@ -1,1 +1,2 @@
-"python.exe" "%~dp0\clach.py" %*
+@echo off
+"python.exe" "%~dp0clach.py" %*
