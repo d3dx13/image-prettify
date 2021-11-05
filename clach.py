@@ -92,8 +92,9 @@ if OUTPUT is not None:
 if PREVIEW:
     window_name = OUTPUT if OUTPUT is not None else "CLAHE " + INPUT
     window_name = "{press any key to close} " + window_name
-    cv2.namedWindow(window_name)
+    cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
     cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+    cv2.setWindowProperty(window_name, cv2.WND_PROP_AUTOSIZE, cv2.WINDOW_AUTOSIZE)
     cv2.moveWindow(window_name, 0, 0)
     cv2.imshow(window_name, image_CLAHE)
     cv2.waitKey(0)
